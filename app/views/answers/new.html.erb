@@ -5,18 +5,9 @@
   <div>
     Favorites:
     <ul>
-      <li class="item">
-        <%= f.check_box :chocolate %> I like <%= f.label :chocolate %>
-      </li>
-      <li class="item">
-        <%= f.check_box :rainbows %> I like <%= f.label :rainbows %>
-      </li>
-      <li class="item">
-        <%= f.check_box :puppies %> I like <%= f.label :puppies %>
-      </li>
-      <li class="item">
-        <%= f.check_box :cold_hard_cash %> I like <%= f.label :cold_hard_cash %>
-      </li>
+      <%= form_for(@answer) do |q| %>
+        <%= render 'question' %>
+      <% end %>
     </ul>
   </div>
   <%= f.submit %>
